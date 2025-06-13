@@ -1,62 +1,47 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+# === iOS (Xcode) Project ===
+# Build and user-specific files
+frontend/build/
+frontend/DerivedData/
+frontend/*.xcworkspace
+frontend/**/*.xcuserdata/
+frontend/**/*.xcuserstate
 
-## User settings
-xcuserdata/
+# macOS metadata
+frontend/.DS_Store
+frontend/**/.DS_Store
 
-## Obj-C/Swift specific
-*.hmap
+# Logs and caches
+frontend/*.log
+frontend/xcdebugger/
 
-## App packaging
-*.ipa
-*.dSYM.zip
-*.dSYM
+# SwiftPM (Swift Package Manager)
+frontend/.build/
+frontend/Packages/
+frontend/Package.resolved
 
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
+# === SQLite Database Files (Backend) ===
+# Main DB file (optional – comment out if you want to track it)
+# backend/database/local_backend.sqlite
 
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
+# SQLite journal and temp files
+backend/database/*.sqlite-wal
+backend/database/*.sqlite-shm
+backend/database/*.sqlite-journal
 
-.build/
+# === General Windows/macOS system files ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.bak
+*.tmp
+*.swp
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
+# === DB Browser for SQLite settings ===
+*.db3
+*.sqlitedb
+*.sqlite.bak
 
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build/
-
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
+# === Python or shell script environments ===
+__pycache__/
+*.pyc
+.env
